@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #333;
+  font-family: cursive;
+}
+
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.center-container {
+  height: auto;
+  max-width: 400px;
+  width: 80%;
+  background-color: whitesmoke;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.app-heading {
+  color: black;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.input-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.input-box-todo {
+  flex: 1;
+  height: 40px;
+  border-radius: 20px;
+  border: 1px solid black;
+  padding: 0 15px;
+  outline: none;
+  font-size: medium;
+  margin-right: 10px;
+}
+
+.add-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background-color: #316fc1;
+  color: white;
+  font-weight: bold;
+  font-size: larger;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-left: 10px;
+}
+
+.add-btn:hover {
+  transform: scale(1.1);
+}
+
+.list-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.list-item {
+  list-style-type: none;
+  border: 2px solid rgb(161, 158, 158);
+  color: black;
+  padding: 8px 15px;
+  border-radius: 5px;
+  margin-top: 10px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.list-item:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.icons {
+  margin-left: auto;
+}
+
+.icons i {
+  margin: 0 5px;
+  font-size: 23px; 
+  cursor: pointer;
+  transition: 0.1s;
+}
+
+.icons i:hover {
+  transform: scale(1.2);
+}
+
+.icon-delete:hover {
+  color: red;
+}
+
+.list-item input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #999;
+  border-radius: 3px;
+  outline: none;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.list-item input[type="checkbox"]:checked::before {
+  content: '\2714';
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  background-color: #316fc1;
+  color: white;
+  border-radius: 3px;
+}
